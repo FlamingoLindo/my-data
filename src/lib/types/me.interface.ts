@@ -20,17 +20,3 @@ interface IRg {
     issuing_agency: string,
     state: string,
 }
-
-export interface IAddress {
-    cep: string,
-    state: string,
-    city: string,
-    street: string,
-    neighborhood: string,
-    number: string
-}
-
-export interface IWork {
-
-}
-
