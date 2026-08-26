@@ -18,6 +18,7 @@ const labelMap: Record<string, string> = {
     street: "Street",
     neighborhood: "Neighborhood",
     number: "Number",
+    nisPis: "PIS/NIS"
 };
 
 export interface FlatField {
