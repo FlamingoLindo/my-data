@@ -20,7 +20,7 @@ interface IRg {
     state: string,
 }
 
-interface IAddress {
+export interface IAddress {
     cep: string,
     state: string,
     city: string,
@@ -42,6 +42,12 @@ const labelMap: Record<string, string> = {
     "documents.rg.number": "RG Number",
     "documents.rg.issuing_agency": "Issuing Agency",
     "documents.rg.state": "State",
+    cep: "Cep",
+    state: "State",
+    city: "City",
+    street: "Street",
+    neighborhood: "Neighborhood",
+    number: "Number",
 };
 
 export interface FlatField {

@@ -2,13 +2,12 @@ version: "0.2"
 ignorePaths:
   - .gitignore
   - src/routes/layout.css
+  - .env
+  - .example.env
 dictionaryDefinitions: []
 dictionaries: []
 words:
-  - Antunes
   - arcticons
-  - Ferreira
   - iconify
-  - Vitor
 ignoreWords: []
 import: []
