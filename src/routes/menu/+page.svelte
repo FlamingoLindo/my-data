@@ -71,6 +71,18 @@
       name: "Emails",
       icon: "bitcoin-icons:email-filled",
     },
+    {
+      id: 9,
+      address: "/data/bank",
+      name: "Bank",
+      icon: "bitcoin-icons:email-filled",
+    },
+    {
+      id: 10,
+      address: "/data/phones",
+      name: "Phones",
+      icon: "bitcoin-icons:email-filled",
+    },
   ];
 </script>
 

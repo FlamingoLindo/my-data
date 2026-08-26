@@ -17,7 +17,6 @@
 
   const { copyText } = copyData();
 
-  // Exclude contractFile from the copyable fields — it's a file path, not a data value
   const fields = $derived(flattenObject({ nisPis: data.nisPis }));
 </script>
 
