@@ -8,13 +8,19 @@
     FieldDescription,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
+  import { goto } from "$app/navigation";
 
   const id = $props.id();
+
+  function handleSubmit(e: SubmitEvent) {
+    e.preventDefault();
+    goto("/menu");
+  }
 </script>
 
 <Card.Root class="mx-auto w-full max-w-sm">
   <Card.Content>
-    <form>
+    <form onsubmit={handleSubmit}>
       <FieldGroup>
         <Field>
           <FieldLabel for="email-{id}">Email</FieldLabel>
@@ -23,7 +29,6 @@
         <Field>
           <div class="flex items-center">
             <FieldLabel for="password-{id}">Password</FieldLabel>
-            <!-- <a href="##" class="ms-auto inline-block text-sm underline"> Forgot your password? </a> -->
           </div>
           <Input id="password-{id}" type="password" required />
         </Field>

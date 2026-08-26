@@ -1,0 +1,11 @@
+version: "0.2"
+ignorePaths:
+  - .gitignore
+  - src/routes/layout.css
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - arcticons
+  - iconify
+ignoreWords: []
+import: []
