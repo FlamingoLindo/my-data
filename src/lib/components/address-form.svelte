@@ -7,25 +7,14 @@
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
   import { flattenObject, type IAddress } from "$lib/types/me.interface";
+  import { copyData } from "$lib/utils/copyData.svelte";
 
   let { data, mapsEmbedUrl }: { data: IAddress; mapsEmbedUrl: string } =
     $props();
 
   const id = $props.id();
 
-  let copiedPath = $state<string | null>(null);
-
-  async function copyText(textToCopy: string, path: string) {
-    try {
-      await navigator.clipboard.writeText(textToCopy);
-      copiedPath = path;
-      setTimeout(() => {
-        if (copiedPath === path) copiedPath = null;
-      }, 1500);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
-    }
-  }
+  const { copyText } = copyData();
 
   const fields = $derived(flattenObject(data));
 </script>
@@ -50,7 +39,7 @@
     </form>
 
     <br />
-    
+
     <iframe
       title="Google Map Embed"
       src={mapsEmbedUrl}
