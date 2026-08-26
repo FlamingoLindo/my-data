@@ -6,8 +6,9 @@
     FieldLabel,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-  import { flattenObject, type IAddress } from "$lib/types/me.interface";
+  import { type IAddress } from "$lib/types/me.interface";
   import { copyData } from "$lib/utils/copyData.svelte";
+  import { flattenObject } from "$lib/utils/fieldLabelMaker";
 
   let { data, mapsEmbedUrl }: { data: IAddress; mapsEmbedUrl: string } =
     $props();

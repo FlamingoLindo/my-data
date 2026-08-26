@@ -1,6 +1,7 @@
 import {
     NAME,
     AGE,
+    BIRTH_DATE,
     GENDER,
     RACE,
     HEIGHT,
@@ -17,6 +18,7 @@ export function load() {
     const me: IMe = {
         name: NAME,
         age: Number(AGE),
+        birthDate: BIRTH_DATE,
         gender: GENDER,
         race: RACE,
         height: Number(HEIGHT),
