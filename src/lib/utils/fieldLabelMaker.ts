@@ -27,7 +27,12 @@ const labelMap: Record<string, string> = {
     instagram: "Instagram",
     twitter: "Twitter",
     steam: "Steam",
-    discord: "Discord"
+    discord: "Discord",
+    firstLicense: "First License",
+    emissionDate: "Emission Date",
+    expirationDate: "Expiration Date",
+    category: "Category",
+    observation: "Observation",
 };
 
 export interface FlatField {
