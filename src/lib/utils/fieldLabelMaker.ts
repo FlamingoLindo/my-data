@@ -39,7 +39,18 @@ const labelMap: Record<string, string> = {
     ptPassportNumber: "Passport Number",
     ptPassportEmissionDate: "Passport Emission Date",
     ptPassportExpirationDate: "Passport Expiration Date",
-
+    gmail1: "Gmail 1",
+    gmail2: "Gmail 2",
+    gmail3: "Gmail 3",
+    gmail4: "Gmail 4",
+    gmail5: "Gmail 5",
+    gmail6: "Gmail 6",
+    gmail7: "Gmail 7",
+    cock1: "Cock 1",
+    cock2: "Cock 2",
+    cock3: "Cock 3",
+    cock4: "Cock 4",
+    cock5: "Cock 5",
 };
 
 export interface FlatField {
