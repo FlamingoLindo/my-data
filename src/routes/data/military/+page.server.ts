@@ -1,7 +1,7 @@
 import {
     MILITARY_FILE_PATH
 } from "$env/static/private";
-import type { IMilitary } from "$lib/types/military.interface";
+import type { IMilitary } from "$lib/interfaces/military.interface";
 
 
 export function load() {

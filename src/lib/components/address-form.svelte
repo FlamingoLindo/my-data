@@ -6,7 +6,7 @@
     FieldLabel,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-  import type { IAddress } from "$lib/types/address.interface";
+  import type { IAddress } from "$lib/interfaces/address.interface";
 
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";

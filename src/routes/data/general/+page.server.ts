@@ -12,7 +12,7 @@ import {
     RG_AGENCY,
     RG_STATE,
 } from "$env/static/private";
-import type { IMe } from "$lib/types/me.interface";
+import type { IMe } from "$lib/interfaces/me.interface";
 
 export function load() {
     const me: IMe = {

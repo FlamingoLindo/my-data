@@ -18,7 +18,16 @@ const labelMap: Record<string, string> = {
     street: "Street",
     neighborhood: "Neighborhood",
     number: "Number",
-    nisPis: "PIS/NIS"
+    nisPis: "PIS/NIS",
+    youtube: "Youtube",
+    twitch: "Twitch",
+    reddit: "Reddit",
+    github: "Github",
+    linkedin: "Linkedin",
+    instagram: "Instagram",
+    twitter: "Twitter",
+    steam: "Steam",
+    discord: "Discord"
 };
 
 export interface FlatField {

@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as Card from "$lib/components/ui/card/index.js";
-  import type { IMilitary } from "$lib/types/military.interface";
+  import type { IMilitary } from "$lib/interfaces/military.interface";
 
   let { data }: { data: IMilitary } = $props();
 

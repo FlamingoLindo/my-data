@@ -6,7 +6,7 @@
     FieldLabel,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-  import { type IMe } from "$lib/types/me.interface";
+  import { type IMe } from "$lib/interfaces/me.interface";
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
 

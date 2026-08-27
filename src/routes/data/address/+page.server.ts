@@ -7,7 +7,7 @@ import {
     NUMBER,
     MAPS_LINK
 } from "$env/static/private";
-import type { IAddress } from "$lib/types/me.interface";
+import type { IAddress } from "$lib/interfaces/address.interface";
 
 export function load() {
     const address: IAddress = {

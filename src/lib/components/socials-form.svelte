@@ -6,18 +6,17 @@
     FieldLabel,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-  import type { IWork } from "$lib/interfaces/work.interface";
-
+  import type { ISocials } from "$lib/interfaces/socials.interface";
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
 
-  let { data }: { data: IWork } = $props();
+  let { data }: { data: ISocials } = $props();
 
   const id = $props.id();
 
   const { copyText } = copyData();
 
-  const fields = $derived(flattenObject({ nisPis: data.nisPis }));
+  const fields = $derived(flattenObject(data));
 </script>
 
 <Card.Root class="mx-auto w-full max-w-sm">
@@ -30,7 +29,7 @@
             <Input
               onclick={() => copyText(String(field.value), field.path)}
               id="{field.path}-{id}"
-              type="text"
+              type={typeof field.value === "number" ? "number" : "text"}
               value={field.value}
               readonly
             />
@@ -38,18 +37,5 @@
         {/each}
       </FieldGroup>
     </form>
-
-    <br />
-
-    <div class="w-full rounded-lg border overflow-hidden">
-      <iframe
-        title="Work Contract"
-        src={data.contractFile}
-        width="100%"
-        height="400"
-        style="border:0;"
-        loading="lazy"
-      ></iframe>
-    </div>
   </Card.Content>
 </Card.Root>
