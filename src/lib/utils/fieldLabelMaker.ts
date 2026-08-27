@@ -55,6 +55,8 @@ const labelMap: Record<string, string> = {
     bankAgency: "Agency",
     bankAccount: "Account",
     bankNumber: "Number",
+    personal: "Personal",
+    residential: "Residential",
 };
 
 export interface FlatField {
