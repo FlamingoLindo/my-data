@@ -33,6 +33,13 @@ const labelMap: Record<string, string> = {
     expirationDate: "Expiration Date",
     category: "Category",
     observation: "Observation",
+    passportNumber: "Passport Number",
+    passportEmissionDate: "Passport Emission Date",
+    passportExpirationDate: "Passport Expiration Date",
+    ptPassportNumber: "Passport Number",
+    ptPassportEmissionDate: "Passport Emission Date",
+    ptPassportExpirationDate: "Passport Expiration Date",
+
 };
 
 export interface FlatField {
