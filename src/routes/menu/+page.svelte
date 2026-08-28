@@ -61,8 +61,8 @@
     },
     {
       id: 7,
-      address: "/data/academic",
-      name: "Academic",
+      address: "/data/academics",
+      name: "Academics",
       icon: "fa-solid:graduation-cap",
     },
     {
