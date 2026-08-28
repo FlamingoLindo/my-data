@@ -64,6 +64,28 @@ const labelMap: Record<string, string> = {
     historyPath: "History",
     idsPath: "IDs",
     certificatePath: "Certificates",
+    cardPath: "Insurance Card",
+    cemaPath: "CEMA",
+    angelicaPath: "Angelica",
+    nesfPath: "NESF",
+    renataPath: "Renata",
+    neuroPath: "Neuropsychologist",
+    birthDataPath: "Birth Data",
+    testPath: "Blood Test",
+    plan: "Plan",
+    accommodation: "Accommodation",
+    coverage: "Coverage",
+    ans: "ANS",
+    segmentation: "Segmentation",
+    prescriptionPath: "Prescription",
+    cema: "CEMA",
+    angelica: "Angelica",
+    nesf: "NESF",
+    renata: "Renata",
+    neuro: "Neuro",
+    birthData: "Birth",
+    type: "Type",
+    allergiesPath: "Allergies"
 };
 
 export interface FlatField {
