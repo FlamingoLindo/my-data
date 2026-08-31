@@ -86,7 +86,8 @@ const labelMap: Record<string, string> = {
     neuro: "Neuro",
     birthData: "Birth",
     type: "Type",
-    allergiesPath: "Allergies"
+    allergiesPath: "Allergies",
+    vaccinesPath: "Vaccines"
 };
 
 export interface FlatField {

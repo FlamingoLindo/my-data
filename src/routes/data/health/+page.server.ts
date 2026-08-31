@@ -17,6 +17,7 @@ import {
     ALLERGIES,
     BLOOD_TEST,
     BLOOD_TYPE,
+    VACCINES
 } from "$env/static/private";
 import type { IHealth } from "$lib/interfaces/health.interface";
 
@@ -54,6 +55,9 @@ export function load() {
         allergies: {
             allergiesPath: ALLERGIES,
         },
+        vaccines: {
+            vaccinesPath: VACCINES
+        }
     };
 
     return { health };

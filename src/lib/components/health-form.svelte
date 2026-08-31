@@ -26,6 +26,7 @@
     { label: "Birth", value: "birth" },
     { label: "Blood", value: "blood" },
     { label: "Allergies", value: "allergies" },
+    { label: "Vaccines", value: "vaccines" },
   ] as const;
 
   type Category = (typeof items)[number]["value"];

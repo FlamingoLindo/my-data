@@ -7,7 +7,8 @@ export interface IHealth {
     neuro: INeuro
     birth: IBirth,
     blood: IBlood,
-    allergies: IAllergies
+    allergies: IAllergies,
+    vaccines: IVaccines
 }
 
 interface IHealthInsurance {
@@ -46,4 +47,8 @@ interface IBlood {
 
 interface IAllergies {
     allergiesPath: string
+}
+
+interface IVaccines {
+    vaccinesPath: string
 }
