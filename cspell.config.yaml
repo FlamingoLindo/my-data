@@ -1,0 +1,20 @@
+version: "0.2"
+ignorePaths:
+  - .gitignore
+  - src/routes/layout.css
+  - .env
+  - .example.env
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - arcticons
+  - boxicons
+  - cema
+  - Goback
+  - iconify
+  - nesf
+  - neuro
+  - NEUROPSYCHOLOGIST
+  - renata
+ignoreWords: []
+import: []
