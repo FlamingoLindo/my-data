@@ -3,6 +3,7 @@ import {
     SCHOOL_IDS,
     SCHOOL_CERTIFICATES,
     SCHOOL_HISTORY,
+    SCHOOL_MUGSHOTS,
     UMC_CONTRACT,
     UMC_CONCLUSION,
     UMC_DIPLOMA,
@@ -17,7 +18,8 @@ export function load() {
             diplomaPath: SCHOOL_DIPLOMA,
             idsPath: SCHOOL_IDS,
             certificatePath: SCHOOL_CERTIFICATES,
-            historyPath: SCHOOL_HISTORY
+            historyPath: SCHOOL_HISTORY,
+            mugshotsPath: SCHOOL_MUGSHOTS
         },
         umc: {
             contractPath: UMC_CONTRACT,

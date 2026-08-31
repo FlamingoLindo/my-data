@@ -64,6 +64,7 @@ const labelMap: Record<string, string> = {
     historyPath: "History",
     idsPath: "IDs",
     certificatePath: "Certificates",
+    mugshotsPath: "Mugshots",
     cardPath: "Insurance Card",
     cemaPath: "CEMA",
     angelicaPath: "Angelica",

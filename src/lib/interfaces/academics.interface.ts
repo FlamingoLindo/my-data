@@ -8,6 +8,7 @@ interface IIpe {
     idsPath: string,
     certificatePath: string,
     historyPath: string,
+    mugshotsPath: string
 }
 
 interface IUmc {
