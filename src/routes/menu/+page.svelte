@@ -54,31 +54,31 @@
       icon: "fa-solid:passport",
     },
     {
-      id: 6,
+      id: 7,
       address: "/data/health",
       name: "Health",
       icon: "game-icons:health-normal",
     },
     {
-      id: 7,
+      id: 8,
       address: "/data/academics",
       name: "Academics",
       icon: "fa-solid:graduation-cap",
     },
     {
-      id: 8,
+      id: 9,
       address: "/data/emails",
       name: "Emails",
       icon: "bitcoin-icons:email-filled",
     },
     {
-      id: 9,
+      id: 10,
       address: "/data/bank",
       name: "Bank",
       icon: "bitcoin-icons:bank-filled",
     },
     {
-      id: 10,
+      id: 11,
       address: "/data/phones",
       name: "Phones",
       icon: "boxicons:phone-filled",
@@ -86,16 +86,16 @@
   ];
 </script>
 
-<div class="flex items-center justify-center min-h-screen">
-  <div class="grid grid-cols-3 gap-3 w-fit">
+<div class="flex items-center justify-center min-h-screen p-4">
+  <div class="grid grid-cols-3 gap-3 w-full max-w-md">
     {#each menuBtns as btn}
       <Button
         size="icon"
-        class="size-40 flex-col gap-1 h-auto cursor-pointer border-2 border-white hover:bg-blue"
+        class="aspect-square w-full h-auto flex-col gap-1 cursor-pointer border-2 border-white"
         onclick={() => goto(btn.address)}
       >
-        <Icon icon={btn.icon} class="size-28" />
-        <span class="text-2xl">{btn.name}</span>
+        <Icon icon={btn.icon} class="size-1/3" />
+        <span class="text-sm sm:text-base md:text-2xl">{btn.name}</span>
       </Button>
     {/each}
   </div>
