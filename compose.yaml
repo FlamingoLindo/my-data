@@ -1,0 +1,22 @@
+services:
+  server:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    env_file:
+      - .env
+    expose:
+      - "3000"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
+      - ./10-generate-allowlist.sh:/docker-entrypoint.d/10-generate-allowlist.sh:ro
+    env_file:
+      - .env
+    depends_on:
+      - server

@@ -4,6 +4,10 @@ ignorePaths:
   - src/routes/layout.css
   - .env
   - .example.env
+  - .dockerignore
+  - Dockerfile
+  - compose.yaml
+  - nginx.conf.template
 dictionaryDefinitions: []
 dictionaries: []
 words:
