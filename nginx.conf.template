@@ -34,7 +34,4 @@ server {
         proxy_set_header Host $host;
         add_header Cache-Control "public, max-age=31536000, immutable";
     }
-
-    include /etc/nginx/allow.conf;
-    deny all;
 }
