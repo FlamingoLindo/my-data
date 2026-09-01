@@ -1,4 +1,4 @@
-geo $allowed {
+geo $http_cf_connecting_ip $allowed {
     default   0;
     include   /etc/nginx/allow.conf;
 }
