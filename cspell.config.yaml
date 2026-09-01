@@ -4,6 +4,9 @@ ignorePaths:
   - src/routes/layout.css
   - .env
   - .example.env
+  - .dockerignore
+  - Dockerfile
+  - compose.yaml
 dictionaryDefinitions: []
 dictionaries: []
 words:
