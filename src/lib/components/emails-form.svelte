@@ -15,6 +15,7 @@
     SelectTrigger,
   } from "$lib/components/ui/select";
   import type { IEmail } from "$lib/interfaces/emails.interface";
+  import { m } from "$lib/paraglide/messages";
 
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
@@ -33,7 +34,7 @@
   let selected = $state("gmail");
 
   const selectedLabel = $derived(
-    items.find((i) => i.value === selected)?.label ?? "Select Email Type",
+    items.find((i) => i.value === selected)?.label ?? m['selectEmail'](),
   );
 
   const fields = $derived(
@@ -49,7 +50,7 @@
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectGroupHeading>Email Type</SelectGroupHeading>
+          <SelectGroupHeading>{m["emailType"]()}</SelectGroupHeading>
           {#each items as item}
             <SelectItem value={item.value} label={item.label}>
               {item.label}

@@ -1,12 +1,14 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
+  import LanguageToggle from "$lib/components/language-toggle.svelte";
   import Button from "$lib/components/ui/button/button.svelte";
   import Icon from "@iconify/svelte";
+  import { m } from "$lib/paraglide/messages";
 
   interface IMenuBtns {
     id: number;
     address: string;
-    name: string;
+    name: () => string;
     icon: string;
   }
 
@@ -14,79 +16,82 @@
     {
       id: 0,
       address: "/data/general",
-      name: "General",
+      name: m.menuGeneral,
       icon: "bi:person-standing",
     },
     {
       id: 1,
       address: "/data/address",
-      name: "Address",
+      name: m.menuAddress,
       icon: "ant-design:home-filled",
     },
     {
       id: 2,
       address: "/data/work",
-      name: "Work",
+      name: m.menuWork,
       icon: "arcticons:digital-work-wallet",
     },
     {
       id: 3,
       address: "/data/military",
-      name: "Military",
+      name: m.menuMilitary,
       icon: "fluent-emoji-high-contrast:military-helmet",
     },
     {
       id: 4,
       address: "/data/socials",
-      name: "Socials",
+      name: m.menuSocials,
       icon: "fluent-mdl2:web-environment",
     },
     {
       id: 5,
       address: "/data/driver",
-      name: "Driver",
+      name: m.menuDriver,
       icon: "fa:drivers-license",
     },
     {
       id: 6,
       address: "/data/passport",
-      name: "Passport",
+      name: m.menuPassport,
       icon: "fa-solid:passport",
     },
     {
       id: 7,
       address: "/data/health",
-      name: "Health",
+      name: m.menuHealth,
       icon: "game-icons:health-normal",
     },
     {
       id: 8,
       address: "/data/academics",
-      name: "Academics",
+      name: m.menuAcademics,
       icon: "fa-solid:graduation-cap",
     },
     {
       id: 9,
       address: "/data/emails",
-      name: "Emails",
+      name: m.menuEmails,
       icon: "bitcoin-icons:email-filled",
     },
     {
       id: 10,
       address: "/data/bank",
-      name: "Bank",
+      name: m.menuBank,
       icon: "bitcoin-icons:bank-filled",
     },
     {
       id: 11,
       address: "/data/phones",
-      name: "Phones",
+      name: m.menuPhones,
       icon: "boxicons:phone-filled",
     },
   ];
 </script>
 
-<div class="flex items-center justify-center min-h-screen p-4">
+<div class="relative flex items-center justify-center min-h-screen p-4">
+  <div class="absolute right-4 top-4">
+    <LanguageToggle />
+  </div>
   <div class="grid grid-cols-3 gap-3 w-full max-w-md">
     {#each menuBtns as btn}
       <Button
@@ -95,7 +100,7 @@
         onclick={() => goto(btn.address)}
       >
         <Icon icon={btn.icon} class="size-1/3" />
-        <span class="text-sm sm:text-base md:text-2xl">{btn.name}</span>
+        <span class="text-sm sm:text-base md:text-2xl">{btn.name()}</span>
       </Button>
     {/each}
   </div>

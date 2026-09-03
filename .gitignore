@@ -24,3 +24,6 @@ vite.config.ts.timestamp-*
 
 static/*.pdf
 static/*.jpg
+# Paraglide
+src/lib/paraglide
+project.inlang/cache/

@@ -5,37 +5,34 @@
     FieldGroup,
     Field,
     FieldLabel,
-    FieldDescription,
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
-  import { goto } from "$app/navigation";
+  import { enhance } from "$app/forms";
+  import { m } from "$lib/paraglide/messages";
 
   const id = $props.id();
-
-  function handleSubmit(e: SubmitEvent) {
-    e.preventDefault();
-    goto("/menu");
-  }
+  let { form } = $props();
 </script>
 
 <Card.Root class="mx-auto w-full max-w-sm">
   <Card.Content>
-    <form onsubmit={handleSubmit}>
+    <form method="POST" use:enhance>
       <FieldGroup>
         <Field>
-          <FieldLabel for="email-{id}">Email</FieldLabel>
-          <Input id="email-{id}" type="email" required />
+          <FieldLabel for="username-{id}">{m["username"]()}</FieldLabel>
+          <Input id="username-{id}" name="username" required />
         </Field>
         <Field>
-          <div class="flex items-center">
-            <FieldLabel for="password-{id}">Password</FieldLabel>
-          </div>
-          <Input id="password-{id}" type="password" required />
+          <FieldLabel for="password-{id}">{m["password"]()}</FieldLabel>
+          <Input id="password-{id}" name="password" type="password" required />
         </Field>
         <Field>
-          <Button type="submit" class="w-full">Login</Button>
+          <Button type="submit" class="w-full">{m["login"]()}</Button>
         </Field>
       </FieldGroup>
     </form>
+    {#if form?.message}
+      <p class="text-sm text-red-500 mt-2">{form.message}</p>
+    {/if}
   </Card.Content>
 </Card.Root>

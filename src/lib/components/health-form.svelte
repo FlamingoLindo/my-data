@@ -15,18 +15,19 @@
     SelectTrigger,
   } from "$lib/components/ui/select";
   import type { IHealth } from "$lib/interfaces/health.interface";
+  import { m } from "$lib/paraglide/messages";
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
 
   const items = [
-    { label: "Insurance", value: "insurance" },
-    { label: "Eye", value: "eye" },
-    { label: "Audio", value: "audio" },
-    { label: "Neuro", value: "neuro" },
-    { label: "Birth", value: "birth" },
-    { label: "Blood", value: "blood" },
-    { label: "Allergies", value: "allergies" },
-    { label: "Vaccines", value: "vaccines" },
+    { label: m["insurance"](), value: "insurance" },
+    { label: m["eye"](), value: "eye" },
+    { label: m["audio"](), value: "audio" },
+    { label: m["neuro"](), value: "neuro" },
+    { label: m["birth"](), value: "birth" },
+    { label: m["blood"](), value: "blood" },
+    { label: m["allergies"](), value: "allergies" },
+    { label: m["vaccines"](), value: "vaccines" },
   ] as const;
 
   type Category = (typeof items)[number]["value"];
@@ -40,7 +41,7 @@
   let selected = $state<Category>("insurance");
 
   const selectedLabel = $derived(
-    items.find((i) => i.value === selected)?.label ?? "Select Category",
+    items.find((i) => i.value === selected)?.label ?? m["selectCategory"](),
   );
 
   const fields = $derived(flattenObject(health[selected]));
@@ -58,7 +59,7 @@
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectGroupHeading>Health Category</SelectGroupHeading>
+          <SelectGroupHeading>{m["healthCategory"]()}</SelectGroupHeading>
           {#each items as item}
             <SelectItem value={item.value} label={item.label}>
               {item.label}
