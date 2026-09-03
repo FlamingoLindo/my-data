@@ -19,12 +19,13 @@
     IPassportBR,
     IPassportPT,
   } from "$lib/interfaces/passport.interface";
+  import { m } from "$lib/paraglide/messages";
   import { copyData } from "$lib/utils/copyData.svelte";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
 
   const items = [
-    { label: "Brazilian", value: "br" },
-    { label: "Portuguese", value: "pt" },
+    { label: m["brazilian"](), value: "br" },
+    { label: m["portuguese"](), value: "pt" },
   ];
 
   let {
@@ -39,7 +40,7 @@
   let selected = $state("br");
 
   const selectedLabel = $derived(
-    items.find((i) => i.value === selected)?.label ?? "Select passport",
+    items.find((i) => i.value === selected)?.label ?? m["selectPassport"](),
   );
 
   const fields = $derived(
@@ -57,7 +58,7 @@
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectGroupHeading>Passport</SelectGroupHeading>
+          <SelectGroupHeading>{m["passport"]()}</SelectGroupHeading>
           {#each items as item}
             <SelectItem value={item.value} label={item.label}>
               {item.label}

@@ -9,7 +9,6 @@
 
 <Card.Root class="mx-auto w-full max-w-sm">
   <Card.Content>
-    <!-- <br /> -->
     <div class="w-full rounded-lg border overflow-hidden">
       <iframe
         title="Work Contract"

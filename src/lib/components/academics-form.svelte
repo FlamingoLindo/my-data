@@ -14,7 +14,7 @@
     SelectTrigger,
   } from "$lib/components/ui/select";
   import type { IAcademics } from "$lib/interfaces/academics.interface";
-  import { copyData } from "$lib/utils/copyData.svelte";
+  import { m } from "$lib/paraglide/messages";
   import { flattenObject } from "$lib/utils/fieldLabelMaker";
 
   const items = [
@@ -26,12 +26,10 @@
 
   const id = $props.id();
 
-  const { copyText } = copyData();
-
   let selected = $state("umc");
 
   const selectedLabel = $derived(
-    items.find((i) => i.value === selected)?.label ?? "Select Academic Type",
+    items.find((i) => i.value === selected)?.label ?? m["selectAcademyType"](),
   );
 
   const fields = $derived(
@@ -51,7 +49,7 @@
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectGroupHeading>Academic Type</SelectGroupHeading>
+          <SelectGroupHeading>{m["academicType"]()}</SelectGroupHeading>
           {#each items as item}
             <SelectItem value={item.value} label={item.label}>
               {item.label}

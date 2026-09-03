@@ -8,6 +8,7 @@
   } from "$lib/components/ui/field/index.js";
   import { Input } from "$lib/components/ui/input/index.js";
   import { enhance } from "$app/forms";
+  import { m } from "$lib/paraglide/messages";
 
   const id = $props.id();
   let { form } = $props();
@@ -18,15 +19,15 @@
     <form method="POST" use:enhance>
       <FieldGroup>
         <Field>
-          <FieldLabel for="username-{id}">Username</FieldLabel>
+          <FieldLabel for="username-{id}">{m["username"]()}</FieldLabel>
           <Input id="username-{id}" name="username" required />
         </Field>
         <Field>
-          <FieldLabel for="password-{id}">Password</FieldLabel>
+          <FieldLabel for="password-{id}">{m["password"]()}</FieldLabel>
           <Input id="password-{id}" name="password" type="password" required />
         </Field>
         <Field>
-          <Button type="submit" class="w-full">Login</Button>
+          <Button type="submit" class="w-full">{m["login"]()}</Button>
         </Field>
       </FieldGroup>
     </form>

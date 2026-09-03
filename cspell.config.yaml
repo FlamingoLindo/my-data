@@ -9,7 +9,7 @@ ignorePaths:
   - compose.yaml
   - nginx.conf.template
 dictionaryDefinitions: []
-dictionaries: []
+dictionaries: ["pt-br"]
 words:
   - arcticons
   - boxicons
@@ -19,6 +19,7 @@ words:
   - nesf
   - neuro
   - NEUROPSYCHOLOGIST
+  - paraglide
   - renata
 ignoreWords: []
 import: []
